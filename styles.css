@@ -11,6 +11,7 @@
     --bck-clr_bright: #ffffff;
     --clr-primary: #6366F1;
     --clr-gray: #9397AD;
+    --clr-border-gray: #E2E5F1;
     -webkit-tap-highlight-color: rgba (0, 0, 0, 0);
     --container-padding: 1rem;
 }
@@ -83,6 +84,7 @@
     align-items: center;
     justify-content: center;
     
+    cursor: pointer;
     transition: 0.5s;
 }
 
@@ -101,8 +103,6 @@
     
 }
 
-
-
 .Header {
     width: 100%;
     height: auto;
@@ -111,22 +111,23 @@
     
 }
 
-.Header-text {
+.text-card {
     display: grid;
     color: var(--bck-clr_bright);
     padding: 1rem;
-    grid-template-rows: 2fr ;
-    gap: 1rem; 
+    grid-template-rows: auto 1fr auto ;
+    gap: 1rem;
 }
 
-.Header-text .header1 {
+.text-card .header1 {
     font-size: 3rem;
     text-align: center;
 }
 
-.Header-text .header2 {
+.text-card .header2 {
     font-size: 1.5rem;
     opacity: 0.7;
+    margin-bottom: 2rem;
     text-align: center;
     
 }
@@ -139,6 +140,8 @@
 }
 .more {
     margin-top: 1rem;
+    justify-self: center;
+    
 }
 .iphone12 {
     height: 100%;
@@ -146,8 +149,18 @@
     
 }
 
-@media (max-width: 768px) {
+.brand-box {
+    border: 1px solid var(--clr-border-gray);
+    border-radius: 8px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+@media (max-width: 768px) {
+    
     #sign-in-btn {
         display: none;
     }
@@ -158,43 +171,93 @@
         display: none;
     } 
     
+    #brands {
+        display: none;
+    }
 }
 
-@media (width > 768px) {
+@media (width: 800px) {
+    .navbar {
+        max-width: 730px;
+    }
     #Button-Mobil-bright {
         display: none;
     }
+    #brand-1, #brand-2 {
+        display: none;
+    }    
     
-
 }
 
 @media (min-width: 1400px) {
     .navbar {
         max-width: 1320px;
-
     }
 
-    .Header-text {
+    .Header-content {
         width: auto;
         height: 876px;
+        padding-inline: 14rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        
     }
-    .header1 {
-        border: solid 1px black;
-        height: 20vh;
-        width: 30vw;
+    .text-card {
+        margin-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        width:  30vw;
+        height: auto;
+        position: absolute;
+        
+        
     }
-    .header2 {
-        border: solid 1px black;
-
+    .text-card .header2 {
+        margin-bottom: 3rem;
     }
+    
     .market-btns {
-        border: solid 1px black;
+        transform: scale(0.8);
+        justify-content: left;
+        
     }
     .more {
-        border: solid 1px black;
-    }
-    .iphone12 {
+        margin-top: 30%;
         
+    }
+    
+    .iphone-container {
+        margin-top: 9rem;
+        margin-left: 50rem;
+        position: relative;
+        aspect-ratio: 1;
+        
+    }
+    
+    .iphone12 :nth-last-of-type(1){
+        transform: scale(1);
+        position: absolute;
+        z-index: 1;
+        transform: translate(-50%, 24%);
+        
+    }
+    .iphone12 :nth-last-of-type(2){
+        transform: scale(1);
+        position: absolute;
+        z-index: 2;
+    }
+    #brands {
+        width: 100%;
+        background-color: var(--bck-clr_dark);
+    
+        .brands-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-inline: 10rem;
+        }
+    
     }
 }
 
@@ -220,3 +283,4 @@ footer {
     }
     
 }
+
