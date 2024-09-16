@@ -8,6 +8,7 @@
 
 :root {
     --bck-clr_dark: #33354D;
+    --bck-clr_dark2: #0B0F19;
     --bck-clr_bright: #ffffff;
     --clr-primary: #6366F1;
     --clr-gray: #9397AD;
@@ -23,6 +24,7 @@
     font-style: normal;
   }
 
+  /* Navbar längst uppe */
 .navbar-background {
     background-color: var(--bck-clr_dark);
     
@@ -103,6 +105,7 @@
     
 }
 
+  /* Första delen av websidan*/
 .Header {
     width: 100%;
     height: auto;
@@ -124,7 +127,7 @@
     text-align: center;
 }
 
-.text-card .header2 {
+.text-card .subheader {
     font-size: 1.5rem;
     opacity: 0.7;
     margin-bottom: 2rem;
@@ -149,6 +152,7 @@
     
 }
 
+/* Brands under första delen av websidan */
 .brand-box {
     border: 1px solid var(--clr-border-gray);
     border-radius: 8px;
@@ -158,24 +162,206 @@
     justify-content: center;
     align-items: center;
 }
+/* Andra delen till websidan */
 
-@media (max-width: 768px) {
+.feature-header {
     
-    #sign-in-btn {
-        display: none;
-    }
-    #Feature {
-        display: none;
-    }
-    .iphone12 {
-        display: none;
-    } 
+    background-color: var(--bck-clr_dark2);
+    width: auto;
+    height: auto;
+    padding-top: 8rem;
+    padding-inline: 14rem;
     
-    #brands {
-        display: none;
-    }
 }
+    
+    .feature-container {
+        display: flex;
+        gap: 10rem;
+    }
 
+    .feature-text h1 {
+        color: var(--bck-clr_bright)
+    }
+
+    .feature-icon{
+        /* width: 60px;
+        height: 60px; */
+        border: solid 1px var(--bck-clr_dark);
+        background-color: var(--bck-clr_dark);
+        border-radius: 8px;
+        padding: 10px;
+        position:absolute;
+        box-sizing: border-box;
+        transform: translate(-130%);
+
+       
+       
+    }
+
+    .feature-description {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, auto); 
+        gap: 1.5rem;
+        margin: 4rem;
+        
+    }
+  
+     .feature-text {
+        grid-column: 1 / -1;
+        box-sizing: border-box;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: -5rem;
+
+    }
+
+    .feature-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding: 2rem;
+
+    }
+
+
+    .feature-header h2 {
+        font-size: 1.25rem;
+        color: var(--bck-clr_bright);
+    }
+    .feature-header p {
+        font-size: 1rem;
+        color: var(--bck-clr_dark);
+        
+    }
+    .feature-container {
+        justify-content: center;
+    }
+    .work {
+        background-color: var(--bck-clr_dark);
+        padding-top: 4rem;
+    }
+    .work-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-wrapper h3 {
+        color: var(--bck-clr_bright);
+        width: 100%;
+        height: auto;
+
+    }
+    .work-headline {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    }
+    .iphone-bilder {
+        display: flex;
+        gap: 6rem;
+    }
+
+
+    .transaction-container {
+        width: 640px;
+        text-align: center;
+        margin-bottom: 4rem;
+        
+        p {
+            color: var(--clr-gray);
+        }
+    }
+    
+    #transaction-1 {
+        font-size: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    #transaction-2 {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+    
+        #sign-in-btn {
+            display: none;
+        }
+        #Feature {
+            display: none;
+        }
+        .iphone12 {
+            display: none;
+        } 
+        
+        #brands {
+            display: none;
+        }
+        #sidomobil {
+            display: none;
+        }
+        
+        .feature-header {
+            padding-inline: 0rem;
+            padding-top: 0rem;
+        }
+        .feature-container {
+            
+        }
+        .feature-text {
+            text-align: center;
+            margin-bottom: 0rem;
+            
+            .feature-text, p {
+                margin: 1rem -2rem 0rem -2rem;
+            }
+        }
+        .feature-description {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            margin: 2.5rem;
+            
+            
+        }
+        .feature-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            
+        }
+        
+        /* How Does It Work? */
+        
+        #iphonework {
+            display: none;
+        }
+        
+        .work-headline {
+            font-size: 2rem;
+            text-align: center;
+            
+        }
+        
+        .transaction-container {
+            width: 100vw;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        #transaction-1 {
+            display: none;
+        }
+
+        #transaction-2 {
+        font-size: 2rem;
+        margin-top: 2rem;
+        text-align: center;
+        margin-bottom: 1rem;
+        }
+
+    }
 @media (width: 800px) {
     .navbar {
         max-width: 730px;
@@ -213,7 +399,7 @@
         
         
     }
-    .text-card .header2 {
+    .text-card .subheader {
         margin-bottom: 3rem;
     }
     
@@ -225,6 +411,10 @@
     .more {
         margin-top: 30%;
         
+    }
+
+    #Button-Mobil-bright {
+        display: none;
     }
     
     .iphone-container {
@@ -239,28 +429,34 @@
         transform: scale(1);
         position: absolute;
         z-index: 1;
-        transform: translate(-50%, 24%);
+        transform: translate(-50%, 33%);
         
     }
     .iphone12 :nth-last-of-type(2){
         transform: scale(1);
         position: absolute;
         z-index: 2;
+        transform: translate(0%, 7%);
     }
     #brands {
         width: 100%;
-        background-color: var(--bck-clr_dark);
-    
+        background-color: var(--bck-clr_dark2);
+        padding-top: 5rem;
+
         .brands-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 1.5rem;
             margin-inline: 10rem;
         }
     
     }
 }
 
+
+
+/* Credit sista delen av websidan */
 footer {
     font-size: 14px;
     
