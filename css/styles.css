@@ -1,0 +1,761 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --bck-clr_dark: #33354D;
+    --bck-clr_dark2: #0B0F19;
+    --bck-clr_bright: #ffffff;
+    --bck-clr_dark3: #3c3f5c;
+    --clr-primary: #6366F1;
+    --clr-gray: #9397AD;
+    --clr-border-gray: #E2E5F1;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    --container-padding: 1rem;
+}
+
+body {
+    font-family: "Manrope", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    overflow-x: hidden;
+  
+}
+
+
+  /* Navbar längst uppe */
+.navbar-background {
+    background-color: var(--bck-clr_dark);
+    
+    .navbar { 
+        background-color: var(--bck-clr_dark);
+        max-width: 100%;
+        height: 4.5rem;
+        
+        padding-left: var(--container-padding);
+        padding-right: var(--container-padding);
+        margin-left: auto;
+        margin-right: auto;
+        display: grid;
+        grid-template-columns: auto 1fr auto auto;
+        justify-content: start;
+        align-items: center;
+        gap: 1.5rem;
+        padding-inline: 10%;
+    }
+}
+
+#solid {
+    object-fit: contain;
+
+}
+
+#Feature {
+    font-size: 1.2rem;
+    
+    padding: 0.5rem;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+#Feature a:hover {
+    color: var(--clr-primary);
+    text-decoration: underline;
+
+}
+
+#switch {
+    margin-left: auto;
+    justify-self: end;
+    
+}
+
+#switch:active {
+    background-color: var(--bck-clr_bright);
+}
+
+#sign-in-btn {
+    padding: 0.7em 2.5em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #6366F1;
+    color: #FFFFFF;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+#sign-in-btn:hover {
+ background-color: hsl(239, 84%, 57%);
+}
+
+#sign-in-btn:active {
+ background-color: hsl(239, 77%, 90%);
+}
+
+@media (max-width: 768px) {
+    
+    #sign-in-btn {
+        display: none;
+        }
+        #Feature {
+            display: none;
+        }
+        .iphone12 {
+            display: none;
+        } 
+        
+        #brands {
+            display: none;
+        }
+        #sidomobil {
+            display: none;
+        }
+        
+    }
+
+  /* Första delen av websidan (Manage All Your Money in One App)*/
+.Header {
+    width: 100%;
+    height: auto;
+    padding-bottom: 2rem;
+    background-color: #33354D;
+    
+}
+
+.text-card {
+    display: grid;
+    color: var(--bck-clr_bright);
+    grid-template-rows: auto 1fr auto ;
+    gap: 1rem;
+}
+
+.text-card .header1 {
+    font-size: 2.5rem;
+
+}
+
+.text-card .subheader {
+    font-size: 1.2rem;
+    opacity: 0.7;
+    margin-bottom: 2rem;
+    text-align: center;
+    
+}
+.market-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    width: 100%;
+}
+.more {
+    margin-top: 1rem;
+    justify-self: center;
+    
+}
+.iphone-container {
+ 
+}
+
+@media (max-width: 768px) {
+    .Header {
+
+    }
+
+    .Header-content {
+
+    }
+
+    .text-card {
+        text-align: center;
+    }
+}
+
+/* Brands under första delen av websidan */
+.brand-box {
+    border: 1px solid var(--clr-border-gray);
+    border-radius: 8px;
+    height: 100px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Andra delen till websidan (App Feature) */
+
+.feature-header {
+    
+    background-color: var(--bck-clr_dark2);
+    width: auto;
+    height: auto;
+    padding-top: 8rem;
+    padding-inline: 14rem;
+    
+}
+    
+    .feature-container {
+        display: flex;
+        gap: 10rem;
+    }
+
+    .feature-text h1 {
+        color: var(--bck-clr_bright)
+    }
+
+    .feature-icon{
+        /* width: 60px;
+        height: 60px; */
+        border: solid 1px var(--bck-clr_dark);
+        background-color: var(--bck-clr_dark);
+        border-radius: 8px;
+        padding: 10px;
+        position:absolute;
+        box-sizing: border-box;
+        transform: translate(-130%);
+    }
+
+    .feature-description {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); 
+        grid-template-rows: repeat(2, auto); 
+        gap: 1.5rem;
+        margin: 4rem;
+    }
+  
+     .feature-text {
+        grid-column: 1 / -1;
+        box-sizing: border-box;
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: -5rem;
+
+    }
+
+    .feature-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        padding: 2rem;
+
+    }
+
+
+    .feature-header h2 {
+        font-size: 1.25rem;
+        color: var(--bck-clr_bright);
+    }
+    .feature-header p {
+        font-size: 1rem;
+        color: var(--bck-clr_dark);
+        
+    }
+    .feature-container {
+        justify-content: center;
+    }
+
+    @media (max-width: 768px) {
+
+        .Header-content {
+            
+        }
+        
+        
+        .feature-header {
+            padding-inline: 0rem;
+            padding-top: 0rem;
+        }
+        .feature-container {
+            
+        }
+        .feature-text {
+            text-align: center;
+            margin-bottom: 0rem;
+            
+            .feature-text, p {
+                margin: 1rem -2rem 0rem -2rem;
+            }
+        }
+        .feature-description {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr;
+            margin: 2.5rem;
+            
+            
+        }
+        .feature-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: left;
+            
+        }
+        
+    }
+
+    /* Tredje delen av websidan (How Does It Work?)*/
+    .work {
+        background-color: var(--bck-clr_dark);
+        padding-top: 4rem;
+    }
+    .work-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .work-wrapper h3 {
+        color: var(--bck-clr_bright);
+        width: 100%;
+        height: auto;
+
+    }
+    .work-headline {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    }
+    .iphone-bilder {
+        display: flex;
+        gap: 6rem;
+    }
+
+
+    .transaction-container {
+        width: 640px;
+        text-align: center;
+        margin-bottom: 4rem;
+        
+        p {
+            color: var(--clr-gray);
+        }
+    }
+    
+    #transaction-1 {
+        font-size: 2rem;
+        margin-top: 4rem;
+        text-align: center;
+        margin-bottom: 1.5rem;
+    }
+    #transaction-2 {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        
+        .work-headline {
+            font-size: 2rem;
+            text-align: center;
+            
+        }
+        
+        #iphonework {
+            display: none;
+        }
+
+        .transaction-container {
+            width: 100vw;
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        #transaction-1 {
+            display: none;
+        }
+        
+        #transaction-2 {
+            font-size: 2rem;
+            margin-top: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+        
+        .payment, .payment-2 {
+            display: none;
+        }
+        
+    }
+      
+ /* Fjärde delen av websidan (Make your money transfer simple and clear) & (Receive payment from international bank details) */
+    .payment {
+        background-color: var(--bck-clr_dark2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        padding-top: 8rem;
+    }
+
+    /* Checkmark gjort med border-width.
+    .checkmark {
+        display: inline-block;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid var(--clr-primary);
+        border-radius: 100%;
+        position: relative;
+    }
+    
+    .checkmark::after {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 16px;
+        border: solid var(--clr-primary);
+        border-width: 0 3px 3px 0;
+        position: absolute;
+        top: 2px;
+        left: 7px;
+        transform: rotate(45deg);
+    } */
+
+
+    .info-container-1 {
+        color: var(--bck-clr_bright);
+        display: flex;
+        width: 1090px;
+    }
+
+    .info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        max-width: 500px;
+    }
+
+    .headline-info {
+        font-size: 2rem;
+    }
+    
+    .paragraph-info{
+        color: var(--bck-clr_dark);
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+    }
+
+    .paragraph-info img {
+        width: 2rem;
+        height: auto;
+    }
+
+    .p-line {
+        display: flex;
+    }
+
+    #graf {
+        margin-left: auto;
+    }
+
+    .learn-more {
+
+        max-width: 170px;
+        height: auto;
+     padding: 0.7em 2.5em;
+    border-radius: 0.5em;
+    border: none;
+    background-color: #6366F1;
+    color: #FFFFFF;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    cursor: pointer;
+    transition: 0.5s;
+    
+    &:hover {
+        background-color: hsl(239, 84%, 57%);
+    }
+    
+    &:active {
+        background-color: hsl(239, 77%, 90%);
+    }
+    
+}
+
+.learn-more .vector {
+    margin: 0.5em;
+    height: 1.5em;
+    width: auto;
+}
+
+.payment-2{
+    background-color: var(--bck-clr_dark2);
+    width: 100vw;
+}
+
+.info-container-2 {
+    color: var(--bck-clr_bright);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-grid-2 {
+    max-width: 530px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"headline-info-2 headline-info-2"
+                        "icon-container-1 icon-container-2"
+                        "learn-more-2 learn-more-2";
+    gap: 3rem;
+    
+}
+
+.headline-info-2 {
+    font-size: 1.5rem;
+    grid-area: headline-info-2;
+}
+
+.icon-container-1 {
+    grid-area: icon-container-1;
+}
+.icon-container-2 {
+    grid-area: icon-container-2;
+}
+
+
+
+#icon-container img {
+    border: solid 1px var(--bck-clr_dark);
+        background-color: var(--bck-clr_dark);
+        border-radius: 8px;
+        padding: 10px;
+        box-sizing: border-box;
+}
+
+
+#learn-more-2 {
+    grid-area: learn-more-2;
+    padding: 0.5rem;
+}
+
+
+.info-grid-2 p {
+    max-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .payment, .payment-2 {
+        display: none;
+    }
+}
+/* Femte delen av Websidan (Clients are Loving Our App)*/
+.review {
+    background-color: var(--bck-clr_dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+
+}
+
+.review-container {
+    padding-top: 5rem;
+    color: var(--bck-clr_bright);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1400px;
+    gap: 1.5rem;
+    
+}
+
+.review-header {
+    font-size: 2rem;
+    max-width: 310px;
+}
+
+.review-box {
+    max-width: 420px;
+    background-color: var(--bck-clr_dark3);
+    border-radius: 8px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-inline: 1.5rem;
+    padding-bottom: 1.5rem;
+
+   
+}
+
+.quotes {
+    transform: translate(0%, -5%);
+    margin-top: -2rem;
+}
+
+.review-id {
+    display: grid;
+    grid-template-areas:"person namn"
+                        "person job" ;
+}
+
+.person {
+    grid-area: person;
+}
+
+.namn {
+    grid-area: namn;
+}
+
+.job {
+    grid-area: job;
+}
+
+.job {
+    color: var(--clr-gray)
+}
+
+.review-id .namn, .review-id .job {
+    margin-right: 8vw;  
+}
+
+@media (max-width: 768px) {
+    .review {
+        display: none;
+    }
+
+}
+
+/* Femte delen av websidan (Clients are Loving Our App) */
+
+        /* tablett */
+@media (width: 992px) {
+    .navbar {
+        max-width: 730px;
+    }
+    #Button-Mobil-bright {
+        display: none;
+    }
+    #brand-1, #brand-2 {
+        display: none;
+    }    
+    
+}
+
+    /* Storskärm */
+@media (min-width: 1400px) {
+    .navbar {
+        max-width: 1320px;
+    }
+
+    .Header-content {
+        width: auto;
+        height: 876px;
+        padding-inline: 20rem;
+        display: flex;
+        
+        
+    }
+    .text-card {
+        padding-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 500px;
+        height: 30vh;
+    }
+
+    .header1 {
+        text-align: left;
+        width: 80%;
+    }
+
+    .text-card .subheader {
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+    
+    .market-btns {
+        display: flex;
+        justify-content: left;
+        
+    }
+
+    .market-btns img {
+        max-width: 400px;
+       
+    }
+    .more {
+        margin-top: 50%;
+        
+    }
+
+    #Button-Mobil-bright {
+        display: none;
+    }
+    
+    .iphone-container {
+        height: 876px;
+        width: 750px;
+        
+        
+    }
+    
+    .iphone12 :nth-last-of-type(1){
+        transform: scale(1);
+        position: absolute;
+        z-index: 1;
+        transform: translate(50%, 64.5%);
+        
+    }
+    .iphone12 :nth-last-of-type(2){
+        transform: scale(1);
+        position: absolute;
+        z-index: 2;
+        transform: translate(120%, 32.5%);
+    }
+    #brands {
+        width: 100%;
+        background-color: var(--bck-clr_dark2);
+        padding-top: 5rem;
+
+        .brands-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            margin-inline: 10rem;
+        }
+    
+    }
+}
+
+
+
+/* Credit sista delen av websidan */
+footer {
+    font-size: 14px;
+    
+    .footer_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15px;
+        gap: 5px;
+        background-color: var(--bck-clr_dark);
+        color: var(--bck-clr_bright);
+    }
+    
+    .copyright {
+        
+    }
+    
+    .credit {
+        
+    }
+    
+}
+
