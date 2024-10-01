@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -24,7 +24,12 @@
             <a href="#" aria-current="page" tabindex="0">Feature</a>
         </div>
         <!-- Dark mode och bright mode switch -->
-        <img id="switch" src="Images/switch.svg" alt="switch">
+         <p class="darkmode-text">Dark Mode</p>
+         <label class="toggle" for="darkmode-switch" aria-label="darkmode-switch">
+            <input type="checkbox" id="darkmode-switch">
+            <span class="slider"></span>
+         </label>
+        <!-- <img id="switch" src="Images/switch.svg" alt="switch"> -->
     
         <!-- Sign in knapp-->
         <button id="sign-in-btn">
@@ -134,8 +139,6 @@
         </div>
     </section>
 
-
-
     <section class="work">
         <div class="work-wrapper">
             <div class="work-headline">
@@ -153,8 +156,6 @@
             </div>
         </div>
     </section>
-
-
 
     <section class="payment">
         <div class="transfer-container">
@@ -183,7 +184,6 @@
             </div>
         </div>
     </section>
-
     <section>
         <div class="payment-2">
             <div class="info-container-2">
@@ -219,7 +219,7 @@
             <div class="review-box">
                 <img class="quotes" src="Images/review-img/quotes.svg" alt="quotes">
                 <img src="Images/review-img/rating4star.svg" alt="Fyr sjärning review">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat amet, iure est similique rem. Fugit qui animi at, ipsa necessitatibus optio alias unde, amet cupiditate mollitia aut magni accusantium.</p>
+                <p id="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat amet, iure est similique rem. Fugit qui animi at, ipsa necessitatibus optio alias unde, amet cupiditate mollitia aut magni accusantium.</p>
                 <div class="review-id">
                     <img class="person" src="Images/review-img/Fannie-Summers.svg" alt="Profil bild">
                     <p class="namn">Fannie-Summers</p>
@@ -229,7 +229,7 @@
             <div class="review-box">
                 <img class="quotes" src="Images/review-img/quotes.svg" alt="quotes">
                 <img src="Images/review-img/rating5star.svg" alt="Fem sjärning review">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat amet, iure est similique rem. Fugit qui animi at, ipsa necessitatibus optio alias unde, amet cupiditate mollitia aut magni accusantium.</p>
+                <p id="review-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates repellat amet, iure est similique rem. Fugit qui animi at, ipsa necessitatibus optio alias unde, amet cupiditate mollitia aut magni accusantium.</p>
                 <div class="review-id">
                     <img class="person" src="Images/review-img/Albert-Flores.svg" alt="Profil bild">
                     <p class="namn">Albert Flores</p>
@@ -238,6 +238,48 @@
             </div>
         </div>
     </section>
+
+    <section class="FAQ">
+            <div class="FAQ-container">
+                <div class="contact-text">
+                    <h3>Any questions? <br> Check out the FAQs</h3>
+                    <p>Still have unanswered questions and need to get in touch?</p>
+                </div>
+                <div id="call" class="contact-container">
+                    <img src="Images/FAQ logo/Call.svg" alt="Telefon">
+                    <p>Still have questions?</p>
+                    <div class="contact-link">
+                        <a href="#">Contact us</a>
+                        <img src="Images/FAQ logo/Vector(1).svg" alt="Pil">
+                    </div>
+                </div>
+                <div id="message" class="contact-container">
+                    <img src="Images/FAQ logo/Message.svg" alt="Skriv bubbla">
+                    <p>Still have questions?</p>
+                    <div class="contact-link">
+                         <a href="#">Contact us</a>
+                         <img src="Images/FAQ logo/Vector(2).svg" alt="Pil">
+                    </div>
+                </div>
+            </div>
+            <div class="accordion">
+                <img src="Images/FAQ logo/accordion.svg" alt="">
+            </div>
+        </section>
+    <section class="subscribe-section">
+        <div class="subscribe-container">
+            <div class="sub-text">
+                <img src="Images/subscribe/notification.svg" alt="notification klocka">
+                <h3>Subscribe to our newsletter to stay informed about latest updates</h3>
+            </div>
+            <div class="input-container">
+                <img class="envelope" src="Images/subscribe/bx-envelope.svg" alt="">
+                <input class="form-input email" type="email" placeholder="Your Email">
+                <button class="sub-knapp">Subscribe</button>
+            </div>
+        </div>
+    </section>
+        
 
     <footer>
         <div class="footer_container">
