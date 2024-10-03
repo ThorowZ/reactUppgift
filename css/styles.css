@@ -21,20 +21,25 @@
     box-sizing: border-box;
 }
 
-/* @media (prefers-color-scheme: light) {
+@media (prefers-color-scheme: light) {
     :root {
         --bck-clr_dark: #ffffff;
         --bck-clr_dark2: #ffffff;
         --bck-clr_dark3: #ffffff;
         --clr-primary: #ffffff;
         --bck-clr_bright: #0B0F19;
+        --clr-text-white: black;
 
     }
-} */
+}
 
 html {
     color-scheme: dark;
 
+}
+
+.light {
+    color-scheme: light;
 }
 
 body {
@@ -87,9 +92,18 @@ body {
 
 }
 
-.darkmode-text {
+.theme-text {
     color: var(--clr-text-gray);
 }
+
+.dark .theme-text {
+    color: var(--clr-text-gray);
+  }
+  
+  .light .theme-text {
+    color: black;
+  }
+
 
 .toggle {
     margin-left: auto;
@@ -177,6 +191,13 @@ input[type="checkbox"]:checked + .slider::before {
 
 @media (max-width: 768px) {
     
+
+    .navbar-background .navbar {
+        display: grid;
+        grid-template-columns: 1fr auto auto ;
+        padding-inline: 0%;
+        padding-right: 5%;
+    }
     #sign-in-btn {
         display: none;
         }
@@ -193,7 +214,11 @@ input[type="checkbox"]:checked + .slider::before {
         #sidomobil {
             display: none;
         }
+        .darkmode-text {
+            display: none;
+        }
         
+
     }
 
   /* Första delen av websidan (Manage All Your Money in One App)*/
@@ -208,7 +233,7 @@ input[type="checkbox"]:checked + .slider::before {
 
 .text-card {
     display: grid;
-    color: var(--bck-clr_bright);
+    color: var(--clr-text-white);
     grid-template-rows: auto 1fr auto ;
     gap: 1rem;
 }
@@ -241,6 +266,8 @@ input[type="checkbox"]:checked + .slider::before {
  
 }
 
+
+/* Tagit hjälp från Chatgpt */
 .navbar-background, .Header {
     background: var(--bck-clr_gradient_main);
     background-attachment: fixed;
@@ -248,19 +275,76 @@ input[type="checkbox"]:checked + .slider::before {
     background-position: 0 0;
 }
 
-
-
 @media (max-width: 768px) {
     .Header {
 
     }
-
     .Header-content {
 
     }
-
     .text-card {
         text-align: center;
+    }
+    .more {
+        padding-top: 2rem;
+        width: 50%;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .Header-content {
+        width: auto;
+        height: 876px;
+        padding-inline: 20rem;
+        display: flex;    
+    }
+    .text-card {
+        padding-top: 10rem;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        max-width: 500px;
+        height: 30vh;
+    }
+
+    .header1 {
+        text-align: left;
+        width: 80%;
+    }
+    .text-card .subheader {
+        margin-bottom: 3rem;
+        text-align: left;
+    }
+    .market-btns {
+        display: flex;
+        justify-content: left;
+    }
+    .market-btns img {
+        max-width: 400px;
+    }
+    .more {
+        margin-top: 50%;
+    }
+    #Button-Mobil-bright {
+        display: none;
+    }
+    .iphone-container {
+        height: 876px;
+        width: 750px; 
+    }
+    .iphone12 :nth-last-of-type(1){
+        transform: scale(1);
+        position: absolute;
+        z-index: 1;
+        transform: translate(50%, 64.5%);
+    }
+    .iphone12 :nth-last-of-type(2){
+        transform: scale(1);
+        position: absolute;
+        z-index: 2;
+        transform: translate(120%, 32.5%);
     }
 }
 
@@ -274,37 +358,36 @@ input[type="checkbox"]:checked + .slider::before {
     justify-content: center;
     align-items: center;
 }
+
+@media (min-width: 1400px) {
+    #brands {
+        width: 100%;
+        background-color: var(--bck-clr_dark2);
+        padding-top: 5rem;
+
+        .brands-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 1.5rem;
+            margin-inline: 10rem;
+        }
+    
+    }
+}
 /* Andra delen till websidan (App Feature) */
 
 .feature-header {
-    
     background-color: var(--bck-clr_dark2);
     width: auto;
     height: auto;
     padding-top: 8rem;
     padding-inline: 14rem;
-    
 }
     
     .feature-container {
         display: flex;
         gap: 10rem;
-    }
-
-    .feature-text h1 {
-        color: var(--bck-clr_bright)
-    }
-
-    .feature-icon{
-        /* width: 60px;
-        height: 60px; */
-        border: solid 1px var(--bck-clr_dark);
-        background-color: var(--bck-clr_dark);
-        border-radius: 8px;
-        padding: 10px;
-        position:absolute;
-        box-sizing: border-box;
-        transform: translate(-130%);
     }
 
     .feature-description {
@@ -321,19 +404,41 @@ input[type="checkbox"]:checked + .slider::before {
         box-sizing: border-box;
         font-size: 2rem;
         width: 30vw;
-
         p {
             padding-top: 1rem;
-
         }
-
     }
 
+    .feature-text h1 {
+        color: var(--bck-clr_bright)
+    }
+    
     .feature-box {
         display: flex;
         flex-direction: column;
         justify-content: left;
         padding: 2rem;
+    }
+    
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        border: solid 1px var(--bck-clr_dark);
+        background-color: var(--bck-clr_dark);
+        border-radius: 8px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        box-sizing: border-box;
+        transform: translate(-130%);
+    }
+
+    .feature-icon{
+        width: auto;
+        height: auto;
+        position: relative;
     }
 
 
@@ -341,12 +446,13 @@ input[type="checkbox"]:checked + .slider::before {
         font-size: 1.25rem;
         color: var(--bck-clr_bright);
     }
+
     .feature-header p {
         font-size: 1rem;
         font-weight: 300;
         color: var(--clr-text-gray);
-        
     }
+
     .feature-container {
         justify-content: center;
     }
@@ -355,11 +461,6 @@ input[type="checkbox"]:checked + .slider::before {
 
     @media (max-width: 768px) {
 
-        .Header-content {
-            
-        }
-        
-        
         .feature-header {
             padding-inline: 0rem;
             padding-top: 0rem;
@@ -370,6 +471,7 @@ input[type="checkbox"]:checked + .slider::before {
         .feature-text {
             text-align: center;
             margin-bottom: 0rem;
+            width: 100%;
             
             .feature-text, p {
                 margin: 1rem -2rem 0rem -2rem;
@@ -377,6 +479,7 @@ input[type="checkbox"]:checked + .slider::before {
         }
         .feature-description {
             display: grid;
+            width: 100%;
             grid-template-columns: 1fr;
             grid-template-rows: 1fr;
             margin: 2.5rem;
@@ -387,6 +490,7 @@ input[type="checkbox"]:checked + .slider::before {
             display: flex;
             flex-direction: column;
             justify-content: left;
+            margin-left: 2rem;
             
         }
         
@@ -462,6 +566,7 @@ input[type="checkbox"]:checked + .slider::before {
         }
         
         #transaction-2 {
+            display: block;
             font-size: 2rem;
             margin-top: 2rem;
             text-align: center;
@@ -904,94 +1009,6 @@ input[type="checkbox"]:checked + .slider::before {
 
     padding-left: 2rem;
 }
-    /* Storskärm */
-@media (min-width: 1400px) {
-    .navbar {
-        max-width: 1320px;
-    }
-
-    .Header-content {
-        width: auto;
-        height: 876px;
-        padding-inline: 20rem;
-        display: flex;
-        
-        
-    }
-    .text-card {
-        padding-top: 10rem;
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        max-width: 500px;
-        height: 30vh;
-    }
-
-    .header1 {
-        text-align: left;
-        width: 80%;
-    }
-
-    .text-card .subheader {
-        margin-bottom: 3rem;
-        text-align: left;
-    }
-    
-    .market-btns {
-        display: flex;
-        justify-content: left;
-        
-    }
-
-    .market-btns img {
-        max-width: 400px;
-       
-    }
-    .more {
-        margin-top: 50%;
-        
-    }
-
-    #Button-Mobil-bright {
-        display: none;
-    }
-    
-    .iphone-container {
-        height: 876px;
-        width: 750px;
-        
-        
-    }
-    
-    .iphone12 :nth-last-of-type(1){
-        transform: scale(1);
-        position: absolute;
-        z-index: 1;
-        transform: translate(50%, 64.5%);
-        
-    }
-    .iphone12 :nth-last-of-type(2){
-        transform: scale(1);
-        position: absolute;
-        z-index: 2;
-        transform: translate(120%, 32.5%);
-    }
-    #brands {
-        width: 100%;
-        background-color: var(--bck-clr_dark2);
-        padding-top: 5rem;
-
-        .brands-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            gap: 1.5rem;
-            margin-inline: 10rem;
-        }
-    
-    }
-}
-
 
 /* Credit sista delen av websidan */
 footer {

@@ -19,6 +19,7 @@ if(hasDarkmode == null) {
 
 
 
+
 darkmodeSwitch.addEventListener('change', () => {
   if(darkmodeSwitch.checked) {
     enableDarkMode()
@@ -31,9 +32,24 @@ darkmodeSwitch.addEventListener('change', () => {
 
 function enableDarkMode() {
   darkmodeSwitch.checked = true
-  document.documentElement.classList.add('dark')
+  document.documentElement.classList.add('light')
+
+  // Tagit hjälp av Chatgpt
+  document.querySelectorAll('.theme-text').forEach(el => {
+    el.textContent = 'Light mode';
+    el.style.color = 'var(--clr-text-gray)';
+  });
+  
+
 }
 function disableDarkMode() {
   darkmodeSwitch.checked = false
-  document.documentElement.classList.remove('dark')
+  document.documentElement.classList.remove('light')
+  
+    // Tagit hjälp av Chatgpt
+  document.querySelectorAll('.theme-text').forEach(el => {
+    el.textContent = 'Dark mode';
+    el.style.color = 'black';
+  });
+
 }
