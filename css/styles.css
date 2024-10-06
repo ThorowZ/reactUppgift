@@ -6,11 +6,12 @@
     --bck-clr_bright: #ffffff;
     --bck-clr_gradient_main: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
     --bck-clr_primary: #6366F1;
-    --clr-gray: #b8bdda;
-    --clr-border-gray: #E2E5F1;
+    --clr-brand-border-gray: #E2E5F1;
+
     --clr-text-white: #ffffff;
     --clr-text-dark: #33354D;
-    --clr-text-gray: hsl(234, 14%, 50%);
+    --clr-text-gray: hsl(234, 14%, 70%);
+    
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
     --container-padding: 1rem;
 }
@@ -21,7 +22,7 @@
     box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
     :root {
         --bck-clr_dark: #ffffff;
         --bck-clr_dark2: #ffffff;
@@ -31,11 +32,11 @@
         --clr-text-white: black;
 
     }
-}
+} */
 
 html {
     color-scheme: dark;
-
+    
 }
 
 .light {
@@ -218,6 +219,10 @@ input[type="checkbox"]:checked + .slider::before {
             display: none;
         }
         
+        .theme-text {
+            display: none
+        }
+        
 
     }
 
@@ -350,13 +355,26 @@ input[type="checkbox"]:checked + .slider::before {
 
 /* Brands under första delen av websidan */
 .brand-box {
-    border: 1px solid var(--clr-border-gray);
+    border: 1px solid var(--clr-brand-border-gray);
     border-radius: 8px;
     height: 100px;
     width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (width: 992px) {
+    .navbar {
+        max-width: 730px;
+    }
+    #Button-Mobil-bright {
+        display: none;
+    }
+    #brand-1, #brand-2 {
+        display: none;
+    }    
+    
 }
 
 @media (min-width: 1400px) {
@@ -529,7 +547,7 @@ input[type="checkbox"]:checked + .slider::before {
         margin-bottom: 4rem;
         
         p {
-            color: var(--clr-gray);
+            color: var(--clr-text-gray);
         }
     }
     
@@ -785,7 +803,7 @@ input[type="checkbox"]:checked + .slider::before {
 }
 
 #review-text {
-    color: var(--clr-gray);
+    color: var(--clr-text-gray);
 }
 
 .quotes {
@@ -813,7 +831,7 @@ input[type="checkbox"]:checked + .slider::before {
 }
 
 .job {
-    color: var(--clr-gray)
+    color: var(--clr-text-gray)
 }
 
 .review-id .namn, .review-id .job {
@@ -908,18 +926,46 @@ input[type="checkbox"]:checked + .slider::before {
     padding: 5rem;
 }
 
-        /* tablett */
-@media (width: 992px) {
-    .navbar {
-        max-width: 730px;
-    }
-    #Button-Mobil-bright {
-        display: none;
-    }
-    #brand-1, #brand-2 {
-        display: none;
-    }    
+.accordion-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+
+
     
+    .FAQ-container {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .contact-text {
+        padding-inline: 2rem;
+        text-align: center;
+    }
+    
+    
+    .accordion-mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+    }
+    
+
+    #call { 
+        display: none;
+    }
+
+    #message {
+        display: none;
+    }
+
+    .accordion {
+        display: none;
+    }
 }
 
 .subscribe-section {
@@ -1010,27 +1056,62 @@ input[type="checkbox"]:checked + .slider::before {
     padding-left: 2rem;
 }
 
+@media (max-width: 768px) {
+    .subscribe-section {
+       
+    }
+
+    .subscribe-container {
+        flex-direction: column;
+        padding-inline: 2rem;
+        box-sizing: border-box;
+    }
+
+    .sub-text {
+        width: 100%;
+    }
+
+    .form-input {
+        padding: 0 2rem 0 0;
+        text-indent: 2.5rem
+
+    }
+
+    .input-container {
+        width: 100%;
+    }
+}
+
 /* Credit sista delen av websidan */
 footer {
     font-size: 14px;
     
+    
+}
+
+.footer_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    gap: 5px;
+    background-color: var(--bck-clr_dark2);
+    color: var(--clr-text-gray);
+}
+
+.copyright {
+    
+}
+
+.credit {
+    
+}
+
+@media (max-width: 768px) {
+
     .footer_container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 3rem;
-        gap: 5px;
-        background-color: var(--bck-clr_dark2);
-        color: var(--clr-text-gray);
+        display: block;
+        text-align: center;
     }
-    
-    .copyright {
-        
-    }
-    
-    .credit {
-        
-    }
-    
 }
 

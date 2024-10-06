@@ -1,0 +1,12 @@
+@mixin header {
+    font-family: 'Manrope', sans-serif;
+    font-weight: bolder;
+    font-style: normal;
+}
+
+@mixin text {
+    font-family: 'Manrope', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+

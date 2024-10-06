@@ -1,0 +1,25 @@
+@mixin bck-color {
+  :root {
+    --bck-clr_dark: hsl(233, 28%, 20%);
+    --bck-clr_dark2: #0B0F19;
+    --bck-clr_dark3: #565973;
+    --bck-clr_dark4: hsla(229, 13%, 32%, 0.5);
+    --bck-clr_bright: #ffffff;
+    --bck-clr_gradient_main: linear-gradient(0deg, rgba(99, 102, 241, 0.1) 0%, rgba(218, 70, 239, 0.05) 42%, rgba(241, 244, 253, 0.07) 83%);
+    --bck-clr_primary: #6366F1;
+    --clr-brand-border-gray: #E2E5F1;
+  }
+}
+
+@mixin text-color {
+  :root {
+  --clr-text-white: #ffffff;
+    --clr-text-dark: #33354D;
+    --clr-text-gray: hsl(234, 14%, 70%);
+  }
+}
+
+body {
+  @include bck-text;
+  @include text-color;
+}
