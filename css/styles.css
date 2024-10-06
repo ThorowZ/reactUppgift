@@ -930,6 +930,10 @@ input[type="checkbox"]:checked + .slider::before {
     display: none;
 }
 
+.btn-contact {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
 
@@ -965,6 +969,17 @@ input[type="checkbox"]:checked + .slider::before {
 
     .accordion {
         display: none;
+    }
+
+    .btn-container {
+        display: block;
+        align-self: center;
+        
+    }
+
+    .btn-contact {
+        display: block;
+        padding: 1em 2.5em;
     }
 }
 
@@ -1099,13 +1114,6 @@ footer {
     color: var(--clr-text-gray);
 }
 
-.copyright {
-    
-}
-
-.credit {
-    
-}
 
 @media (max-width: 768px) {
 
