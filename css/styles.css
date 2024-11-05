@@ -22,6 +22,11 @@
     box-sizing: border-box;
 }
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 /* @media (prefers-color-scheme: light) {
     :root {
         --bck-clr_dark: #ffffff;
@@ -1027,6 +1032,10 @@ input[type="checkbox"]:checked + .slider::before {
     border-radius: 8px 0px 0px 8px;
     font-size: 1rem;
     z-index: 5;
+}
+
+.form-invalid {
+    border: solid 2px firebrick;
 }
 
 .sub-knapp {

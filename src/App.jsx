@@ -7,12 +7,30 @@ import Work from './components/Work'
 import Payment from './components/Payment'
 import Payment2 from './components/Payment2'
 import Review from './components/Review'
+import FAQ from './components/FAQ'
+import Subscribe from './components/Subscribe'
+import Footer from './components/Footer'
+import Accordion from './components/Accordion'
+import DarkModeSwitch from './components/DarkModeSwitch'
+
 
 export default function App() {
+
   return (
-    <>
-    
-    </>
+    <div>
+    <Navbar />
+    <Header />
+    <Brands />
+    <Feature />
+    <Work />
+    <Payment />
+    <Payment2 />
+    <Review />
+    <FAQ />
+    <Accordion />
+    <Subscribe />
+    <Footer />
+    </div>
 
   )
 }

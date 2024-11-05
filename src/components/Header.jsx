@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Header() {
   return (
-    <section className="Header">
+    <header className="Header">
       <div className="Header-content">
         <div className="text-card">
           <div className="header-card">
@@ -26,6 +26,6 @@ export default function Header() {
           </div>
         </div>
       </div>
-    </section>
+    </header>
   );
 }

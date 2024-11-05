@@ -1,6 +1,11 @@
 import React from 'react'
 
 export default function Brands() {
+
+        const animation = () => {
+            
+        }
+
   return (
     <section id="brands">
     <div className="brands-container">
