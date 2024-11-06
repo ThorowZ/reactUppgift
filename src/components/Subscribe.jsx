@@ -1,15 +1,45 @@
 import React from 'react'
+import { v4 as uuidv4 } from 'uuid';
 import { useState } from 'react'
 
 export default function Subscribe() {
 
   const [Mail, setMail] = useState('')
 
-  const handleSubmit =(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    if(customName.trim() === '') return
+    alert('Successfully submitted')
+    
+    if(Mail.trim() === '') return
+
+    try {
+      const res = await fetch('', {
+        method: 'post',
+        headers: {
+          'Content-type': 'application/json'
+        },
+        body: JSON.stringify(FormData)
+      });
+  
+      if (res.ok) {
+        const data = await res.json();
+        console.log('Response data:', data); // Handle response data here
+      } else {
+        console.error('Request failed:', res.status);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  };
+  
+
+  const handleChange = (e) => {
+    const { email, value} = e.target
+    setFormData({...FormData, [Mail]: value})
   }
+
+
   
   return (
     <section className="subscribe-section">
