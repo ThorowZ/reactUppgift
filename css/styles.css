@@ -44,6 +44,12 @@ html {
     
 }
 
+
+.dark {
+    color-scheme: dark;
+
+}
+
 .light {
     color-scheme: light;
 }
@@ -824,6 +830,13 @@ input[type="checkbox"]:checked + .slider::before {
 
 .person {
     grid-area: person;
+    display: block;
+    height: 50px;
+    max-width: 50px;
+}
+
+.star-rating {
+    display: flex;
 }
 
 .namn {

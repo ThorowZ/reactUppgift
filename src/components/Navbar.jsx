@@ -1,4 +1,5 @@
 import React from 'react';
+import DarkModeSwitch from './DarkModeSwitch';
 
 export default function Navbar() {
   return (
@@ -15,11 +16,12 @@ export default function Navbar() {
         </div>
 
         {/* Dark mode and bright mode switch */}
-        <p className="theme-text"></p>
+        {/* <p className="theme-text"></p>
         <label className="toggle" htmlFor="darkmode-switch" aria-label="darkmode-switch">
           <input type="checkbox" id="darkmode-switch" />
           <span className="slider"></span>
-        </label>
+        </label> */}
+        <DarkModeSwitch />
 
         {/* Sign in button */}
         <button id="sign-in-btn">

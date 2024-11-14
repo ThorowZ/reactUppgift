@@ -1,70 +1,35 @@
-import React from 'react'
-import { useState } from 'react'
-import { useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 export default function DarkModeSwitch() {
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
-  const darkmodeSwitch = document.querySelector('#darkmode-switch')
-const hasDarkmode = localStorage.getItem('darkmode')
+  const toggleSwitch = () => {
+    setIsDarkMode(!isDarkMode);
+  };
 
-if(hasDarkmode == null) {
-  if(window.matchMedia('(prefers-color-scheme: dark)').matches) {
-    enableDarkMode()
-  } else {
-    disableDarkMode()
-  }
-} else if(hasDarkmode === 'on') {
-  enableDarkMode()
-} else if(hasDarkmode === 'off') {
-  disableDarkMode()
-}
+  useEffect(() => {
+    if (isDarkMode) {
+      enableDarkMode();
+    } else {
+      disableDarkMode();
+    }
+  }, [isDarkMode]);
 
+  const enableDarkMode = () => {
+    document.body.classList.add('dark-mode'); 
+  };
 
-
-
-darkmodeSwitch.addEventListener('change', () => {
-  if(darkmodeSwitch.checked) {
-    enableDarkMode()
-    localStorage.setItem('darkmode', 'on')
-  } else {
-    disableDarkMode()
-    localStorage.setItem('darkmode', 'off')
-  }
-})
-
-function enableDarkMode() {
-  darkmodeSwitch.checked = true
-  document.documentElement.classList.add('light')
-
-
-  document.querySelectorAll('.theme-text').forEach(el => {
-    el.textContent = 'Light mode';
-    el.style.color = 'var(--clr-text-gray)';
-  });
-  
-
-}
-function disableDarkMode() {
-  darkmodeSwitch.checked = false
-  document.documentElement.classList.remove('light')
-  
-
-  document.querySelectorAll('.theme-text').forEach(el => {
-    el.textContent = 'Dark mode';
-    el.style.color = 'black';
-  });
-
-}
-
-    
+  const disableDarkMode = () => {
+    document.body.classList.remove('dark-mode'); 
+  };
 
   return (
     <div>
-      <p class="theme-text"></p>
-         <label class="toggle" for="darkmode-switch" aria-label="darkmode-switch">
-            <input type="checkbox" id="darkmode-switch" />
-            <span class="slider"></span>
-         </label>
+      <p className="theme-text">{isDarkMode ? 'Light Mode' : 'Dark Mode'}</p>
+      <label className="toggle" htmlFor="darkmode-switch" aria-label="darkmode-switch">
+        <input type="checkbox" id="darkmode-switch" checked={isDarkMode} onChange={toggleSwitch} />
+        <span className="slider"></span>
+      </label>
     </div>
-  )
+  );
 }

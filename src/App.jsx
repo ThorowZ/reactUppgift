@@ -11,6 +11,7 @@ import FAQ from './components/FAQ'
 import Subscribe from './components/Subscribe'
 import Footer from './components/Footer'
 import Accordion from './components/Accordion'
+import Test from './components/Test'
 import DarkModeSwitch from './components/DarkModeSwitch'
 
 
@@ -30,6 +31,7 @@ export default function App() {
     <Accordion />
     <Subscribe />
     <Footer />
+    <Test />
     </div>
 
   )
