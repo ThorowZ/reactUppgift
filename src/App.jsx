@@ -28,10 +28,8 @@ export default function App() {
     <Payment2 />
     <Review />
     <FAQ />
-    <Accordion />
     <Subscribe />
     <Footer />
-    <Test />
     </div>
 
   )
