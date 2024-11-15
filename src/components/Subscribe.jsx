@@ -76,7 +76,7 @@ export default function Subscribe() {
         <div className="subscribe-container">
             <div className="sub-text">
                 <img src="Images/subscribe/notification.svg" alt="notification klocka" />
-                <h3>Subscribe to our newsletter to stay informed about latest updates</h3>
+                <h3 className='text-white'>Subscribe to our newsletter to stay informed about latest updates</h3>
             </div>
             <form className="input-container" onSubmit={handleSubmit}>
                 <img className="envelope" src="Images/subscribe/bx-envelope.svg" alt="" />

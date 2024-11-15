@@ -45,13 +45,25 @@ html {
 }
 
 
-.dark {
-    color-scheme: dark;
+.dark {  
 
 }
 
 .light {
-    color-scheme: light;
+
+    color: var(--bck-clr_dark2);
+    --bck-clr_dark: hsl(0, 0%, 100%);
+    --bck-clr_dark2: #ffffff;
+    --bck-clr_dark3: #ffffff;
+    --bck-clr_dark4: hsl(0, 0%, 100%);
+    --bck-clr_bright: #000000;
+    --bck-clr_gradient_main: #f1f1f1;
+    --bck-clr_primary: #6366F1;
+    --clr-brand-border-gray: #E2E5F1;
+
+    --clr-text-white: #000000;
+    --clr-text-dark: #000000;
+    --clr-text-gray: hsl(0, 0%, 0%);
 }
 
 body {

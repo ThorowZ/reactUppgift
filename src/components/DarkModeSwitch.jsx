@@ -1,27 +1,38 @@
 import React, { useState, useEffect } from 'react';
 
 export default function DarkModeSwitch() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
+
+  
   const toggleSwitch = () => {
     setIsDarkMode(!isDarkMode);
+
+    
   };
+
+  
 
   useEffect(() => {
     if (isDarkMode) {
-      enableDarkMode();
-    } else {
       disableDarkMode();
+    } else {
+      enableDarkMode();
     }
   }, [isDarkMode]);
 
   const enableDarkMode = () => {
-    document.body.classList.add('dark-mode'); 
+    
+    document.body.classList.add('dark');
+    document.body.classList.remove('light'); 
   };
 
   const disableDarkMode = () => {
-    document.body.classList.remove('dark-mode'); 
+    document.body.classList.add('light'); 
+    document.body.classList.remove('dark'); 
   };
+
+  
 
   return (
     <div>

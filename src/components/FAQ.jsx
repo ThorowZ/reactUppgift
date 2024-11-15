@@ -1,6 +1,26 @@
 import React from 'react'
+import Accordion from './Accordion'
+import { useState } from 'react'
 
 export default function FAQ() {
+
+const Faq = () => {
+    const [Accordion, setAccordion] = useState([])
+
+    const fetchFaq = async () => {
+    const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq')
+    const data = await res.json()
+    setAccordion(data)
+    }
+
+    useEffect(() => {
+        return () => {
+            fetchFaq()
+        }
+    }, [])
+    
+}
+
   return (
     <section className="FAQ">
             <div className="FAQ-container">
@@ -38,7 +58,12 @@ export default function FAQ() {
             </div>
             
             <div className="accordion">
-                <img src="Images/FAQ logo/accordion.svg" alt="" />
+                {/* <img src="Images/FAQ logo/accordion.svg" alt="" /> */}
+
+                {Accordion.map(item => (
+                    <Accordion key={item.id} item={item} />  
+                ))}
+
             </div>
         </section>
   )
