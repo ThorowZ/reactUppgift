@@ -4,16 +4,15 @@ import StarRating from './StarRating'
 
 
 export default function compReview({item}) {
-    // const Avatar = () => {
-    //     console.log(item,avatarUrl)
-    // }
+    // console.log("CompReview received item:", item);
+
 
   return (
       <section className="review">
         <div className="review-container">
             <div className="review-box">
                 <img className="quotes" src="Images/review-img/quotes.svg" alt="quotes" />
-                <StarRating StarRating={item.StarRating} />
+                <StarRating starRating={item.starRating} />
                 <p id="review-text">{item.comment}</p>
                 <div className="review-id">
                     <img className="person" src={item.avatarUrl} alt="Profil bild" />

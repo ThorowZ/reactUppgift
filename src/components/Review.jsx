@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import CompReview from './compReview'
+import CompReview from './CompReview'
 
 export default function Review(item) {
     const [review, setreview] = useState([])
